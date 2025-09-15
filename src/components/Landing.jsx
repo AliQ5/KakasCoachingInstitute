@@ -44,7 +44,7 @@ const Landing = () => {
             Enroll Now
           </a>
           <a
-            href="#"
+            href="/Notes"
             className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-semibold text-[var(--color-primary)] bg-white border border-[var(--color-primary)] hover:bg-[var(--color-bg-accent)] shadow transition-colors text-base sm:text-lg"
             style={{ fontFamily: "var(--font-heading)" }}
           >
@@ -61,7 +61,7 @@ const Landing = () => {
         transition={{ type: "spring", stiffness: 70, damping: 18, delay: 0.25 }}
       >
         <img
-          src="/Landing.png"
+          src="/logo.png"
           alt="Landing"
           className="w-full max-w-xs sm:max-w-md md:max-w-2xl rounded-2xl shadow-lg object-cover"
           style={{ background: "var(--color-bg-light)" }}

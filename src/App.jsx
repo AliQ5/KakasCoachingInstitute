@@ -11,7 +11,8 @@ import Mathematics from "./components/note/Mathematics";
 import Quran from "./components/note/Islamic-Studies";
 import Science from "./components/note/Science";
 import Urdu from "./components/note/Urdu";
-import Reload from "./components/reload";
+import Reload from "./components/Reload";
+import Glimpse from "./pages/Glimpse";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/Notes/Islamic-Studies" element={<Quran />} />
         <Route path="/Notes/Science" element={<Science />} />
         <Route path="/Notes/Urdu" element={<Urdu />} />
+        <Route path="/Glimpse" element={<Glimpse />} />
       </Routes>
     </Reload>
   );

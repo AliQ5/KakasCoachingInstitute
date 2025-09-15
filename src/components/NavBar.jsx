@@ -58,7 +58,7 @@ const NAV_LINKS = [
   { label: "Courses & Offerings", type: "scroll", target: "courses" },
   { label: "Our Notes", type: "route", target: "/Notes" },
   { label: "Reviews", type: "scroll", target: "reviews" },
-  { label: "Contact", type: "scroll", target: "enroll" },
+  { label: "What's Inside", type: "route", target: "/Glimpse" },
 ];
 
 const scrollToSection = (id) => {

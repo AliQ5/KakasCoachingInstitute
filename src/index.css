@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  /* Design System */
+  --design-name: "EduSpark Fun & Flow";
+
+  /* Primary Accent (Sunny Gold/Orange) */
+  --color-primary: #FDB913; /* Enroll Now buttons, glowing Arabic letters, main highlights */
+  --color-primary-hover: #e0a30f;
+
+  /* Secondary Accent (Deep Blue) */
+  --color-secondary: #1E3A8A; /* Headlines, logo text, outlines, borders */
+
+  /* Lighter Blue Accents */
+  --color-bright-blue: #3B82F6; /* Explore Courses buttons, icons, highlights */
+  --color-sky-blue: #60A5FA;    /* Card accents, graphical elements */
+
+  /* Backgrounds */
+  --color-bg-main: #F8FAFC;    /* Main canvas */
+  --color-bg-light: #FFFFFF;   /* Cards, nav bar, sections */
+  --color-bg-accent: #E2E8F0;  /* Section separators, soft backgrounds */
+
+  /* Text Colors */
+  --color-text-main: #111827;      /* Headlines, main content */
+  --color-text-secondary: #374151; /* Subheadings, descriptions */
+  --color-text-muted: #6B7280;     /* Small details, footer text */
+
+  /* Borders & Shadows */
+  --color-border: #E5E7EB;
+  --color-shadow: rgba(0, 0, 0, 0.05);
+
+  /* Fonts */
+  --font-heading: "Poppins", "Inter", "Helvetica Neue", sans-serif;
+  --font-body: "Inter", "Roboto", "Segoe UI", sans-serif;
+}
+
+/* Hide scrollbar for all browsers, but allow scrolling */
+html, body, * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

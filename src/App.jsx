@@ -12,10 +12,7 @@ import Quran from "./components/note/Islamic-Studies";
 import Science from "./components/note/Science";
 import Urdu from "./components/note/Urdu";
 import Reload from "./components/Reload";
-<<<<<<< HEAD
 import Glimpse from "./pages/Glimpse";
-=======
->>>>>>> 259722dd1c01baf5918ad062bc0954f0f5eca93f
 
 const App = () => {
   return (

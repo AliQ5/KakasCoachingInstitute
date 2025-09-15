@@ -11,7 +11,7 @@ import Mathematics from "./components/note/Mathematics";
 import Quran from "./components/note/Islamic-Studies";
 import Science from "./components/note/Science";
 import Urdu from "./components/note/Urdu";
-import Reload from "./components/reload";
+import Reload from "./components/Reload";
 
 const App = () => {
   return (

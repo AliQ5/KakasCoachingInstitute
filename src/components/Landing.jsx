@@ -1,13 +1,23 @@
 import React from 'react'
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
-
+  const navigate = useNavigate();
 
   const Btn_Links = [
     { label: "Our Notes", type: "route", target: "/Notes" },
     { label: "What's Inside", type: "route", target: "/Glimpse" },
   ];
+
+  // Handler for button clicks, similar to handleNavClick in NavBar.jsx
+  const handleBtnClick = (btn) => (e) => {
+    if (btn.type === "route") {
+      e.preventDefault();
+      navigate(btn.target);
+    }
+    // If you ever add scroll type, handle here
+  };
 
   return (
     <div className="w-full min-h-screen flex flex-col bg-[var(--color-bg-main)]">
@@ -52,13 +62,14 @@ const Landing = () => {
           {Btn_Links.map((btn) => (
             <a
               key={btn.target}
-              href={btn.target}
+              href={btn.type === "route" ? btn.target : "#"}
               className={
                 btn.label === "Our Notes"
                   ? "inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-semibold text-[var(--color-primary)] bg-white border border-[var(--color-primary)] hover:bg-[var(--color-bg-accent)] shadow transition-colors text-base sm:text-lg"
                   : "inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-semibold text-white bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-hover,#a855f7)] shadow transition-colors text-base sm:text-lg"
               }
               style={{ fontFamily: "var(--font-heading)" }}
+              onClick={handleBtnClick(btn)}
             >
               {btn.label === "Our Notes" ? (
                 <i className="ri-book-open-fill text-xl"></i>

@@ -2,6 +2,13 @@ import React from 'react'
 import { motion } from "framer-motion";
 
 const Landing = () => {
+
+
+  const Btn_Links = [
+    { label: "Our Notes", type: "route", target: "/Notes" },
+    { label: "What's Inside", type: "route", target: "/Glimpse" },
+  ];
+
   return (
     <div className="w-full min-h-screen flex flex-col bg-[var(--color-bg-main)]">
       {/* Header Section */}
@@ -42,22 +49,25 @@ const Landing = () => {
             <i className="ri-rocket-2-fill text-xl"></i>
             Enroll Now
           </a>
-          <a
-            href="/Notes"
-            className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-semibold text-[var(--color-primary)] bg-white border border-[var(--color-primary)] hover:bg-[var(--color-bg-accent)] shadow transition-colors text-base sm:text-lg"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            <i className="ri-book-open-fill text-xl"></i>
-            Explore Courses
-          </a>
-          <a
-            href="/Glimpse"
-            className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-semibold text-white bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-hover,#a855f7)] shadow transition-colors text-base sm:text-lg"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            <i className="ri-eye-2-fill text-xl"></i>
-            What's Inside
-          </a>
+          {Btn_Links.map((btn) => (
+            <a
+              key={btn.target}
+              href={btn.target}
+              className={
+                btn.label === "Our Notes"
+                  ? "inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-semibold text-[var(--color-primary)] bg-white border border-[var(--color-primary)] hover:bg-[var(--color-bg-accent)] shadow transition-colors text-base sm:text-lg"
+                  : "inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-semibold text-white bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-hover,#a855f7)] shadow transition-colors text-base sm:text-lg"
+              }
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              {btn.label === "Our Notes" ? (
+                <i className="ri-book-open-fill text-xl"></i>
+              ) : (
+                <i className="ri-eye-2-fill text-xl"></i>
+              )}
+              {btn.label}
+            </a>
+          ))}
         </motion.div>
       </motion.header>
       {/* Display Section */}
@@ -77,5 +87,4 @@ const Landing = () => {
     </div>
   )
 }
-
 export default Landing

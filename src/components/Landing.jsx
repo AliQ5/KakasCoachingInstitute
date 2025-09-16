@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
 
-
 const Landing = () => {
   return (
     <div className="w-full min-h-screen flex flex-col bg-[var(--color-bg-main)]">
@@ -50,6 +49,14 @@ const Landing = () => {
           >
             <i className="ri-book-open-fill text-xl"></i>
             Explore Courses
+          </a>
+          <a
+            href="/Glimpse"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-semibold text-white bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-hover,#a855f7)] shadow transition-colors text-base sm:text-lg"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            <i className="ri-eye-2-fill text-xl"></i>
+            What's Inside
           </a>
         </motion.div>
       </motion.header>

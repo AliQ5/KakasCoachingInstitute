@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Landing = () => {
   const navigate = useNavigate();

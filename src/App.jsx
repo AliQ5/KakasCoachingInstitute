@@ -13,6 +13,7 @@ import Science from "./components/note/Science";
 import Urdu from "./components/note/Urdu";
 import Reload from "./components/Reload";
 import Glimpse from "./pages/Glimpse";
+import Announcements from "./assets/Announcements";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/Notes/Science" element={<Science />} />
         <Route path="/Notes/Urdu" element={<Urdu />} />
         <Route path="/Glimpse" element={<Glimpse />} />
+        <Route path="/Announcements" element={<Announcements />} />
       </Routes>
     </Reload>
   );
